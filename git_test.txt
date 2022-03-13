@@ -13,6 +13,8 @@ git commit -m "참고"
 git push origin master ->upload
 git pull origin master ->download
 
+git commit -a -m "참고"
+
 git config user.name
 git config user.name
 
@@ -22,3 +24,11 @@ $ git config --global user.email johndoe@example.com
 오류
 ! [rejected] main -> main (fetch first)
 -> git pull --rebase origin master
+
+
+# 소스코드 업로드 후 수정한경우 다시 업로드
+git status 실행 후 변경사항 확인
+git add 하거나 git commit -a -m "" 실행
+git push origin main
+
+이렇게 실행하면 git 저장소주소에 업로드 확인할 수 있음

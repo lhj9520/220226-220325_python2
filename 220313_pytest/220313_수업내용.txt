@@ -1,0 +1,8 @@
+220313 수업
+openpyxl 모듈 사용
+엑셀 파일 생성/수정/조회/저장
+코드펜으로 html 기본 개념 설명
+div/a/section 태그, css 사용 등
+
+다음주 수업
+requests/beautifulsoup 모듈 사용

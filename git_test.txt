@@ -5,10 +5,6 @@ https://ebbnflow.tistory.com/198
 3. git init
 4. git remote add origin 저장소주소
 https://github.com/lhj9520/220226-220325_python2.git
-5. git push -u origin master
-
-git config user.name
-git config user.name
 
 git remote add origin shift+insert .git
 git status
@@ -17,6 +13,11 @@ git commit -m "참고"
 git push origin master ->upload
 git pull origin master ->download
 
+git config user.name
+git config user.name
+
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
 
 오류
 ! [rejected] main -> main (fetch first)

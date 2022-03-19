@@ -16,7 +16,7 @@ git pull origin master ->download
 git commit -a -m "참고"
 
 git config user.name
-git config user.name
+git config user.email
 
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com

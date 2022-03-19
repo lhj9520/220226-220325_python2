@@ -23,7 +23,7 @@ $ git config --global user.email johndoe@example.com
 
 오류
 ! [rejected] main -> main (fetch first)
--> git pull --rebase origin master
+-> git pull --rebase origin main
 https://iancoding.tistory.com/165
 git push origin +main 강제 push
 

@@ -7,7 +7,8 @@ from bs4 import BeautifulSoup
 request_headers = { 'User-Agent' : ('Mozilla/5.0 (Windows NT 10.0;Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98Safari/537.36'), }
 # 네이버의 경우 알 수 없는 정보들을 다 쳐내기 때문에 기기정보를 작성해주는 것
 
-r = req.get('https://news.naver.com/', headers = request_headers)
+# r = req.get('https://news.naver.com/', headers = request_headers)
+r = req.get('https://news.daum.net/', headers = request_headers)
 # print(r)
 
 # html code 읽어와야 됨
@@ -16,5 +17,20 @@ r = req.get('https://news.naver.com/', headers = request_headers)
 # html code parser
 soup = BeautifulSoup(r.text, 'html.parser')
 
-list = soup.select(".cjs_channel_card")
-print(list)
+list = soup.select(".list_newsissue a")
+# print(list[1]["href"])
+
+# 뉴스 link 받아오기
+url = req.get(list[1]["href"], headers = request_headers)
+# print(url.text)
+
+# html parser
+soup1 = BeautifulSoup(url.text, 'html.parser')
+
+title = soup1.select(".tit_view")
+print("기사 타이틀 :",title[0].text+"\n")
+
+list1 = soup1.select(".article_view p")
+# print(list1[0].text)
+for text in list1:
+    print(text.text+"\n")
